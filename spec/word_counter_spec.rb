@@ -1,6 +1,8 @@
 require_relative '../lib/word_counter.rb'
-
+require_relative './shakespeare.txt'
+dictionnary = ["the", "of", "and", "to", "a", "in", "for", "is", "on", "that", "by", "this", "with", "i", "you", "it", "not", "or", "be", "are"]
 dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "it", "i", "low", "own", "part", "partner", "sit"]
+
 describe "compte les mots" do
   it "dois retourer un hash avec les mots assosiés à leur nombre" do
     expect(word_counter("below", dictionary)).to eq({"below"=>1, "low"=>1})
@@ -10,3 +12,11 @@ describe "compte les mots" do
   end
 
 end
+
+
+describe "compte les mots dans Shakespeare" do
+  it "dois retourer un hash avec les mots assosiés à leur nombre pour du Shakespeare" do
+    expect(word_counter("below", dictionary)).to eq({"below"=>1, "low"=>1})
+  end
+end
+
