@@ -12,12 +12,12 @@ end
 
 words_shakespeare = []
 File.open("shakespeare.txt").each do |line|
-	words_shakespeare << line		
+	words_shakespeare << line.chomp		
 end
 words_shakespeare = words_shakespeare.join(" ")
 
 #----------------lancement des compteurs---------------------------------------
 
-puts word_counter(words_shakespeare, dictionnary)
+#puts word_counter(words_shakespeare, dictionnary)
 puts word_counter(words_shakespeare, dictionnary_bad_words)
 
